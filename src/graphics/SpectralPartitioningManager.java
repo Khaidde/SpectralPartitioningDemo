@@ -89,17 +89,6 @@ public final class SpectralPartitioningManager {
         		}
         	}
         }
-//        double median; //Calculate median from sorted list
-//        if (relevantSpectrum.length % 2 == 1) {
-//        	median = relevantSpectrum[(int) (relevantSpectrum.length / 2)];
-//        } else {
-//        	median = relevantSpectrum[relevantSpectrum.length / 2] + relevantSpectrum[relevantSpectrum.length / 2]
-//        }
-        
-        System.out.println("---------------");
-        for (int i = 0; i < relevantIndices.length; i++) {
-        	System.out.println(relevantIndices[i] + "::" + relevantSpectrum[i]);
-        }
         
         this.nodeGroups = new NodeGroup[graph.getTotalNodes()];
     	for (int i = 0; i < relevantIndices.length; i++) {
@@ -109,12 +98,6 @@ public final class SpectralPartitioningManager {
     		} else {
     			this.nodeGroups[relevantIndices[i]] = NodeGroup.NODE_B;
     		}
-//    		double entryOfEigenVector = eigenVector.get(i, 0);
-//    		if (entryOfEigenVector < 0) {
-//    			this.nodeGroups[i] = NodeGroup.NODE_A;
-//    		} else {
-//    			this.nodeGroups[i] = NodeGroup.NODE_B;
-//    		}
     	}
     }
     
